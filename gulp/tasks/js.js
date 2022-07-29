@@ -15,7 +15,7 @@ export const js = () => {
 			webpack({
 				mode: app.isBuild ? "production" : "development",
 				output: {
-					filename: "app.min.js",
+					filename: "script.min.js",
 				},
 			})
 		)
