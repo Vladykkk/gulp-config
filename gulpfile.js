@@ -23,7 +23,6 @@ import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
-import { sprite } from "./gulp/tasks/sprite.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
 import { videos } from "./gulp/tasks/videos.js";
@@ -46,7 +45,7 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 // Основні задачі
 const mainTasks = gulp.series(
 	fonts,
-	gulp.parallel(copy, html, scss, js, images, videos, audio, sprite)
+	gulp.parallel(copy, html, scss, js, images, videos, audio)
 );
 
 // Побудова сценаріїв виконання задач
@@ -56,7 +55,6 @@ const deployZIP = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftp);
 
 // Експорт сценаріїв
-export { sprite };
 export { dev };
 export { build };
 export { deployZIP };
