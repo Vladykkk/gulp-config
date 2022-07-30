@@ -26,7 +26,7 @@ Production mode, files are optimizing, for photos creating file extension webp (
 ```
 npm run deploy
 ```
-Files are sending on ftp server, but before this you need to write a data of your server in appropriate file.
+Sending a files on server by ftp, but before this you need to write a data of your server in appropriate file.
 ```
 npm run zip
 ```
