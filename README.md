@@ -18,8 +18,16 @@ npm i
 ```
 npm run dev
 ```
-Starting a project in developer mode, files isn't optimizing (photos, fonts), only work process (live page updating, watching on files in project folder).
+Developer mode, files isn't optimizing (photos, fonts), only work process (live page updating, watching on files in project folder).
 ```
 npm run build
 ```
-Starting a project in productivity mode, files are optimizing, for photos creating file extension webp (if it's possible), webp has a smaller size than png or jpg, and saves quality. Fonts extension otf convert into ttf
+Production mode, files are optimizing, for photos creating file extension webp (if it's possible), webp has a smaller size than png or jpg, and saves quality. Fonts converting from .otf and .ttf to .woff and .woff2, creating font-weight based on file name, and writing data into a style file.
+```
+npm run deploy
+```
+Files are sending on ftp server, but before this you need to write a data of your server in appropriate file.
+```
+npm run zip
+```
+Creating a zip file with projects files inside.
